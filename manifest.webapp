@@ -1,0 +1,22 @@
+{
+	"version":"1.0",
+	"name":"Custom Js Css",
+	"description":"Custom Js Css",
+	"launch_path":"index.html",
+	"icons":{"16":null,
+	"48":"img/icons/Logo_48.jpg",
+	"128":null
+	},
+	"developer":{
+	"url":"",
+	"name":"",
+	"email":""
+	},
+	"installs_allowed_from":null,
+	"default_locale":"en",
+	"activities": {
+	  "dhis": {
+	  "href": "*"
+		}
+	}
+}
