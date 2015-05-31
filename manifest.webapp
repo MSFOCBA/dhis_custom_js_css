@@ -15,8 +15,8 @@
 	"installs_allowed_from":null,
 	"default_locale":"en",
 	"activities": {
-	  "dhis": {
-	  "href": "*"
+		"dhis": {
+	  		"href": "*"
 		}
 	}
 }
