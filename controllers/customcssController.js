@@ -1,4 +1,4 @@
-customJsCss.controller('customcssController', ["$scope", "Style", function($scope, Style){
+customJsCss.controller('customcssController', ["$scope", "Style", "$timeout", function($scope, Style, $timeout){
 	
 	$scope.title = "Edit Custom Css File";
 	$scope.success = false;
@@ -17,15 +17,16 @@ customJsCss.controller('customcssController', ["$scope", "Style", function($scop
 		Style.Post(editor.getValue())
 			.success(function(){
 				$scope.success = true;
+				$timeout(function(){
+					$scope.success = false;
+				}, 3000);
 			})
 			.error( function(){
 				$scope.error = true;
+				$timeout(function(){
+					$scope.error = false;
+				}, 3000);
 			});
 	};
-	
-	editor.on("change", function(){
-		$scope.success = false;
-		$scope.error = false;
-	});
 	
 }] );

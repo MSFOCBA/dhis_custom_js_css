@@ -1,6 +1,15 @@
 
 var customJsCss = angular.module('customJsCss', ['ngRoute','ngResource']);
 
+var dhisUrl = $.parseJSON( $.ajax({
+	type: "GET",
+	dataType: "json",
+	url: 'manifest.webapp',
+	async: false
+}).responseText).activities.dhis.href.replace( '/dhis-web-maintenance-appmanager', '' );
+
+var ApiUrl = dhisUrl + '/api';
+
 customJsCss.config(function($routeProvider, $locationProvider) {
 	
 	$routeProvider.when('/customjs', {
@@ -12,14 +21,12 @@ customJsCss.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'views/codeEditorView.html',
 		controller: 'customcssController'
 	});
+	
+	$routeProvider.when('/home',{
+		template: '<div></div>',
+		controller: function() {window.location.replace(dhisUrl);}
+	});
 });
-
-var ApiUrl = $.parseJSON( $.ajax({
-	type: "GET",
-	dataType: "json",
-	url: 'manifest.webapp',
-	async: false
-}).responseText).activities.dhis.href.replace( '/dhis-web-maintenance-appmanager', '' ) + '/api';
 
 customJsCss.factory("Script", ['$http', function($http){
 	return {
