@@ -4,13 +4,13 @@
 	"description":"Custom Js Css",
 	"launch_path":"index.html",
 	"icons":{"16":null,
-	"48":"img/icons/Logo_48.jpg",
+	"48":"img/Logo_48.png",
 	"128":null
 	},
 	"developer":{
 	"url":"",
-	"name":"",
-	"email":""
+	"name":"Victor Garcia - MSFOCBA",
+	"email":"victor.garcia@barcelona.msf.org"
 	},
 	"installs_allowed_from":null,
 	"default_locale":"en",
