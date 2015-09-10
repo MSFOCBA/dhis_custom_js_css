@@ -1,0 +1,16 @@
+#editor {
+	width: 100%;
+}
+
+.left-side-menu {
+	background-color: #E8EAEA;
+	height: 100%;
+}
+
+.main-content {
+	padding: 0% 2%;
+}
+
+.panel.welcome {
+	width: 70%;
+}

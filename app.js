@@ -12,20 +12,23 @@ var ApiUrl = dhisUrl + '/api';
 
 customJsCss.config(function($routeProvider, $locationProvider) {
 	
-	$routeProvider.when('/customjs', {
-		templateUrl: 'views/codeEditorView.html',
-		controller: 'customjsController'
-	});
-	
-	$routeProvider.when('/customcss', {
-		templateUrl: 'views/codeEditorView.html',
-		controller: 'customcssController'
-	});
-	
-	$routeProvider.when('/home',{
-		template: '<div></div>',
-		controller: function() {window.location.replace(dhisUrl);}
-	});
+	$routeProvider
+		.when('/customjs', {
+			templateUrl: 'views/codeEditorView.html',
+			controller: 'customjsController'
+		})
+		.when('/customcss', {
+			templateUrl: 'views/codeEditorView.html',
+			controller: 'customcssController'
+		})
+		.when('/home',{
+			template: '<div></div>',
+			controller: function() {window.location.replace(dhisUrl);}
+		})
+		.otherwise({
+			templateUrl: 'views/welcome.html',
+			controller: function(){}
+		});
 });
 
 customJsCss.factory("Script", ['$http', function($http){

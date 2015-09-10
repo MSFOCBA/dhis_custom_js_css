@@ -15,23 +15,21 @@
 		<script src="controllers/customjsController.js" type="text/javascript"> </script>
 		<script src="controllers/customcssController.js" type="text/javascript"> </script>
 		
-		<style type="text/css">
-			#editor {
-				width: 100%;
-				
-			}
-		</style>
+		<!-- style -->
+		<link rel="stylesheet" type="text/css" href="style/customjscss.css">
+		
 	</head>
 	<body ng-app="customJsCss">
-		<div class="col-md-2">
+		<div class="col-md-2 left-side-menu">
 			<ul class="nav nav-pills nav-stacked">
+				<br>
 				<li data-toggle="pill"><a href="#/customjs">Javascript</a></li>
 				<li data-toggle="pill"><a href="#/customcss">Style</a></li>
 				<br><br>
 				<li><a href="#/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 			</ul>
 		</div>
-		<div class="col-md-10"><div ng-view></div></div>
+		<div class="col-md-10 main-content"><div ng-view></div></div>
 	</body>
 </html>
 	
